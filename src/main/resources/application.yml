@@ -2,6 +2,8 @@ server:
   port: 3001
 
 spring:
+  profiles:
+    active: dev
   # 데이터 베이스 연결 설정
   datasource:
     driverClassName: oracle.jdbc.driver.OracleDriver
