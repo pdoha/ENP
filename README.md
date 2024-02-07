@@ -28,7 +28,11 @@
 - 로그인 시
 #### 회원가입시 - <a href="https://github.com/pdoha/ENP>상세보기 - 이동></a> 
 
+---
 
+### :green_book: 개발 일지
+#### 1일차 - [초기설정](k8s/how-to-blow-up-a-cluster.md)
+#### 2일차 - [회원가입구현](k8s/how-to-blow-up-a-cluster.md)
 
 
 ### 작업소감
