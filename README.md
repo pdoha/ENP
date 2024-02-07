@@ -1,5 +1,5 @@
-# ENP (Enjoy and Play)
-> 스프링 부트 + React 피시방 메뉴판
+# TIL
+> Today I Learned 2024.02.08
 
 
 
@@ -7,34 +7,50 @@
 
 ---
 
-## :computer: 프로젝트 소개
+### 오늘 작업
 
-피시방 메뉴보드를 참고 하여 만든 키오스크입니다.
+- [설정 - jwt]
   
-### :alarm_clock: 개발 기간
-* 24.02.07 ~
+ ```yml:application.yml
 
-### :hammer: 개발 환경
-- `java `
-- `JDK 1.8.0`
-- **Framework** : SpringBoot
-- **Database** : Oracle DB
-- **ORM** : Mybatis
+//JWT 설정
+def querydslDir = "$buildDir/generated/querydsl"
 
-## :pushpin: 주요 기능
-#### 로그인 - <a href="https://github.com/pdoha/ENP>상세보기 - 이동></a>
-- DB 검증
-- ID, PW 찾기
-- 로그인 시
-#### 회원가입시 - <a href="https://github.com/pdoha/ENP>상세보기 - 이동></a> 
+sourceSets {
+	main.java.srcDirs += [ querydslDir ]
+}
 
----
+tasks.withType(JavaCompile) {
+	options.getGeneratedSourceOutputDirectory().set(file(querydslDir))
+}
 
-### :green_book: 개발 일지
-#### 1일차 - [초기설정](https://github.com/pdoha/ENP/tree/member?tab=readme-ov-file)
-#### 2일차 - [회원가입구현](k8s/how-to-blow-up-a-cluster.md)
+clean.doLast {
+	file(querydslDir).deleteDir()
+}
+```
+
+ ```html:hello.html
+
+<div>
+ <p>Hello, LYNMP!</p>
+</div>
+```
+
+- [공통,회원 엔티티]
+
+ ```html:hello.html
+
+<div>
+ <p>Hello, LYNMP!</p>
+</div>
+```
+
+### 오류
+ > ERROR : 연동시 지원되지 않는 문자 집합
+> - DB연동시 특정 테이블이 추가되지 않음
+> - implementation group: 'com.oracle.ojdbc', name: 'orai18n', version: '19.3.0.0' //의존성 추가로 해결
+
 
 
 ### 작업소감
 - [how to blow up a k8s cluster](k8s/how-to-blow-up-a-cluster.md)
-
