@@ -31,8 +31,8 @@
 ---
 
 ### :green_book: 개발 일지
-#### 1일차 - [초기설정](https://github.com/pdoha/ENP/tree/member?tab=readme-ov-file)
-#### 2일차 - [회원가입구현](k8s/how-to-blow-up-a-cluster.md)
+#### 1일차 - [초기설정](https://github.com/pdoha/ENP/tree/dev?tab=readme-ov-file)
+#### 2일차 - [회원가입구현](https://github.com/pdoha/ENP/tree/join?tab=readme-ov-file)
 
 
 ### 작업소감
