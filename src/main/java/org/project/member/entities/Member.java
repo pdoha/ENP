@@ -16,15 +16,15 @@ import org.project.commons.entities.Base;
 public class Member extends Base {
     @Id
     @GeneratedValue
-    private Long seq;
+    private Long seq; //회원번호
     @Column(length=60, unique = true, nullable = false)
     private String email;
 
     @Column(length=65, nullable = false)
-    private String password;
+    private String userPw;
 
     @Column(length=30, nullable = false)
-    private String name;
+    private String userName;
 
     @Column(length=11)
     private String mobile; //휴대폰 번호
