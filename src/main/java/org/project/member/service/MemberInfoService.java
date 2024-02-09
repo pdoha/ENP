@@ -27,7 +27,9 @@ public class MemberInfoService implements UserDetailsService {
          UsernameNotFoundException(username));
 
         //권한
+        //member에서 getType 가져오고 , 없을때는 기본적으로 일반사용자로 해주자 ( null값일때 오류발생할수도 있으니
         MemberType type = Objects.requireNonNullElse(member.getType(), MemberType.USER);
+
         List<GrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority(type.name()));
 
         return MemberInfo.builder()
