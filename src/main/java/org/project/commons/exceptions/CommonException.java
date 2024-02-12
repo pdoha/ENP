@@ -10,7 +10,7 @@ public class CommonException extends RuntimeException{
     //상태코드 조회해서 쓸 수 있게
     @Getter
     private HttpStatus status; //상태코드 추가
-    private Map<String, List<String>> messages;
+    private Map<String, List<String>> messages; //필드명과 에러메세지
 
 
     //필드명, 오류 메세지
