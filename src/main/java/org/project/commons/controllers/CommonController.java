@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@RestControllerAdvice("commons.controllers")
+@RestControllerAdvice("org.project.commons.controllers")
 public class CommonController {
     @ExceptionHandler(Exception.class) //범용적인 기능이니까 상위클래스
     public ResponseEntity<JSONData> errorHandler(Exception e){
@@ -29,7 +29,7 @@ public class CommonController {
         //실패
         data.setSuccess(false);
         data.setStatus(status);
-        data.setMessage(message);
+        data.setMessage(message); //메세지 한개일 수 도 있고, 여러개 일 수도 있음
 
         e.printStackTrace();
 

@@ -6,8 +6,10 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 
+
+@NoArgsConstructor
+@RequiredArgsConstructor
 @Data
-@NoArgsConstructor @RequiredArgsConstructor
 public class JSONData {
     //성공했을때
     private boolean success = true;
