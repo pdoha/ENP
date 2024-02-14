@@ -49,6 +49,7 @@ public class TokenProvider {
 
         //토큰 만료시간 setExpiration의 data객체 만들기
         Date expires = new Date((new Date()).getTime() + tokenValidityInSeconds * 1000); //1시간뒤 만료시간
+
         return Jwts.builder() //토큰을 만드는 메서드 (기본정보를 실어서)
                 .setSubject(authentication.getName()) //아이디
                 .claim("auth", authorities ) //권한 (키와 값 형태)

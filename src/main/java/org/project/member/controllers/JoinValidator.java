@@ -35,8 +35,8 @@ public class JoinValidator implements Validator, PasswordValidator, MobileValida
          */
 
         String email = form.email();
-        String password = form.password();
-        String confirmPassword = form.confirmPassword();
+        String password = form.userPw();
+        String confirmPassword = form.confirmPw();
         String mobile = form.mobile();
 
         // 1. 아이디 중복 여부 체크
