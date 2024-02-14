@@ -49,7 +49,9 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(c -> {
             //전체 접근 가능한 페이지 & 로그인시 접근 가능한 페이지
-
+            c.requestMatchers("/api/v1/member", // 회원가입
+                    "/api/v1/member/token").permitAll()
+                    .anyRequest().authenticated();
         });
 
 
